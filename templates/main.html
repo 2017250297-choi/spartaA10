@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C.A.I info</title>
     <link rel="stylesheet" href="../static/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        function hideNshow(i,s){
+            if(s){
+                $('#_'+i).hide();
+            }else{
+                $('#_'+i).show();
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -13,28 +23,38 @@
     
     <div class="container">
 
-        <div class = "box1">
+        <div class = "commonBoxStyle box1" onmouseenter="hideNshow(0,0)" onmouseleave="hideNshow(0,1)">
+            <div class="overlay">
+                <div class="content" id="_0">
+                    In the ever-evolving world of IT security, online criminals are continuously looking for new ways to gain access to your private information. Research shows the days of one-word passwords are numbered and taking their place are passphrases – multiple word phrases using letters, symbols and spaces to create keys that are nearly impossible to crack.
+                </div>
+            </div>
             <p> 이미지를 삽입합니다. </p>
         </div>
-        <div class = "box2">
+        <div class = "commonBoxStyle box2">
+            <div class="overlay">
+                <div class="content">
+                    In the ever-evolving world of IT security, online criminals are continuously looking for new ways to gain access to your private information. Research shows the days of one-word passwords are numbered and taking their place are passphrases – multiple word phrases using letters, symbols and spaces to create keys that are nearly impossible to crack.
+                </div>
+            </div>
             <p> 이미지를 삽입합니다. </p>
         </div>
-        <div class = "box3">
+        <div class = "commonBoxStyle box3">
             <p> 이미지를 삽입합니다. </p>
         </div>
-        <div class = "box4">
+        <div class = "commonBoxStyle box4">
             <p> 이미지를 삽입합니다. </p>
         </div>
-        <div class = "box5">
+        <div class = "commonBoxStyle box5">
             <p> 이미지를 삽입합니다. </p>
         </div>
-        <div class = "box6">
+        <div class = "commonBoxStyle box6">
             <p> 이미지를 삽입합니다. </p>
         </div>
-        <div class = "box7">
+        <div class = "commonBoxStyle box7">
             <p> 이미지를 삽입합니다. </p>
         </div>
-        <div class = "box8">
+        <div class = "commonBoxStyle box8">
             <p> 이미지를 삽입합니다. </p>
         </div>
     </div>
