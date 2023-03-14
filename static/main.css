@@ -50,73 +50,74 @@ left: 332px;
     gap: 30px;
 }
 
-
-.box1 {
-    grid-column: 1/4;
+.commonBoxStyle{
+    position: relative;
     padding: 90px;
     border: 1px solid black;
     text-align: center;
     box-shadow: 9px 11px 6px 3px rgba(0,0,0,0.45);
     box-sizing: border-box;
+}
+.overlay{
+    width: 0;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    color: transparent;
+    transition: 
+        width   .2s cubic-bezier(.23,.65,.19,1),
+        color   .1s .2s cubic-bezier(.72,.03,1,.22);
+
+}
+.commonBoxStyle:hover .overlay{
+    width: 75%;
+    color: black;
+}
+.contents{
+    position: absolute;
+    width: auto;
+    margin: 10px;
+    text-align: left;
+    white-space: normal;
+}
+.box1 {
+    grid-column: 1/4;
+    padding: 90px;
 }
 
 .box2 {
     grid-row: 2/4;
     padding: 90px;
-    border: 1px solid black;
-    text-align: center;
-    box-shadow: 9px 11px 6px 3px rgba(0,0,0,0.45);
-    box-sizing: border-box;
 }
 .box3 {
     grid-column: 2/ 4;
     padding: 90px;
-    border: 1px solid black;
-    text-align: center;
-    box-shadow: 9px 11px 6px 3px rgba(0,0,0,0.45);
-    box-sizing: border-box;
 }
 .box4 {
 
     grid-column: 2/4;
     padding: 90px;
-    border: 1px solid black;
-    text-align: center;
-    box-shadow: 9px 11px 6px 3px rgba(0,0,0,0.45);
-    box-sizing: border-box;
 }
 .box5 {
     grid-column: 1/3;
     padding: 90px;
-    border: 1px solid black;
-    text-align: center;
-    box-shadow: 9px 11px 6px 3px rgba(0,0,0,0.45);
-    box-sizing: border-box;
 }
 .box6 {
     grid-column: 3/ 4;
     padding: 90px;
-    border: 1px solid black;
-    text-align: center;
-    box-shadow: 9px 11px 6px 3px rgba(0,0,0,0.45);
-    box-sizing: border-box;
 }
 .box7 {
     margin-bottom: 30px;
     grid-row: 5 / 7;
     padding: 90px;
-    border: 1px solid black;
-    text-align: center;
-    box-shadow: 9px 11px 6px 3px rgba(0,0,0,0.45);
-    box-sizing: border-box;
 }
 .box8 {
     margin-bottom: 30px;
     grid-row: 5/-1;
     grid-column: 2/4;
     padding: 90px;
-    border: 1px solid black;
-    text-align: center;
-    box-shadow: 9px 11px 6px 3px rgba(0,0,0,0.45);
-    box-sizing: border-box;
 }
