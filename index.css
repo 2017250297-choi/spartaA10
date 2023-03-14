@@ -1,0 +1,155 @@
+* {
+  font-family: 'Nanum Brush Script', cursive;
+}
+
+body {
+  background-image: url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F1aBej%2Fbtr3HrUGqxJ%2FzbeyAB8OtWaCjSAw9Qr6xK%2Fimg.jpg);
+}
+
+/* x-prifile */
+header {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 80px;
+  /* margin-bottom: -500px; */
+}
+/* 로고랑 박스 중간에 둘 수 있는 방법 찾아서 수정할 예정 */
+
+.myxp {
+  width: 600px;
+  height: 100px;
+}
+
+/* container */
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav #container {
+  width: 1000px;
+  height: 850px;
+  padding: auto 0px auto;
+}
+nav #container .box_top {
+  display: flex;
+}
+
+/* TMI */
+nav #container .box_top .mybox1 {
+  border: 6px double black;
+  margin-left: 20px;
+  margin-top: 15px;
+  width: 600px;
+  height: 250px;
+}
+
+nav #container .box_top .mybox1 > h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+}
+
+nav #container .box_top .mybox1 > p {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+/* image */
+nav #container .box_top .mybox2 {
+  border: 6px double black;
+  margin-left: 20px;
+  margin-top: 15px;
+  margin-right: 20px;
+  width: 330px;
+  height: 300px;
+}
+
+nav #container .box_bot {
+  display: flex;
+}
+nav #container .box_bot .bot_left {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+/* target */
+nav #container .box_bot .bot_left .mybox5 {
+  border: 6px double black;
+  margin-left: 20px;
+  margin-top: -20px;
+  width: 600px;
+  height: 250px;
+}
+
+nav #container .box_bot .bot_left .mybox5 > h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+}
+
+/* information */
+nav #container .box_bot .bot_right .mybox4 {
+  border: 6px double black;
+
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 15px;
+  width: 330px;
+  height: 500px;
+}
+
+nav #container .box_bot .bot_right .mybox4 > h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+}
+
+nav #container .box_bot .bot_right .mybox4 > p {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+
+/* pros and cons */
+nav #container .box_bot .bot_left .mybox3 {
+  border: 6px double black;
+  margin-left: 20px;
+  margin-top: 30px;
+  width: 600px;
+  height: 250px;
+}
+
+nav #container .box_bot .bot_left .mybox3 > h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+}
+
+/* email address */
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+.myblog {
+  border: 6px double black;
+  width: 960px;
+  height: 50px;
+  margin-top: 30px;
+}
+
+footer > div > h3 {
+  display: flex;
+  justify-content: center;
+}
