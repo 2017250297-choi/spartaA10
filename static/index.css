@@ -4,6 +4,7 @@
 
 body {
   background-image: url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F1aBej%2Fbtr3HrUGqxJ%2FzbeyAB8OtWaCjSAw9Qr6xK%2Fimg.jpg);
+  background-size: cover;
 }
 
 /* x-prifile */
@@ -15,11 +16,11 @@ header {
 }
 
 .logo {
+  width: auto;
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin: 30px auto 30px auto;
   margin-bottom: 30px;
-  margin-left: 80px;
   /* margin-bottom: -500px; */
 }
 /* 로고랑 박스 중간에 둘 수 있는 방법 찾아서 수정할 예정 */
