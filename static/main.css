@@ -68,14 +68,21 @@ left: 332px;
     background-color: #008CBA;
     overflow: hidden;
     color: transparent;
+    /*transition from hover to unhover*/
     transition: 
-        width   .2s cubic-bezier(.23,.65,.19,1),
-        color   .1s .2s cubic-bezier(.72,.03,1,.22);
+        width   .2s .05s cubic-bezier(.23,.65,.19,1),
+        color   .1s cubic-bezier(0.00, 0.78, 0.28, 0.97);
+    
 
 }
 .commonBoxStyle:hover .overlay{
     width: 75%;
     color: black;
+    /*transition from unhover to hover*/
+    transition: 
+        width   .2s cubic-bezier(.23,.65,.19,1),
+        color   .1s .15s cubic-bezier(.72,.03,1,.22);
+    
 }
 .contents{
     position: absolute;
