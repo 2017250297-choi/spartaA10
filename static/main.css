@@ -44,12 +44,6 @@ z-index: 0;
 bottom: -38px;
 left: 332px;
 }
-.logoimage{
-    position: relative;
-    bottom:0%;
-    width: 100%;
-    height: auto;
-}
 .container {
     display: grid;
     grid-template-columns: repeat(3, 400px);
@@ -73,7 +67,7 @@ left: 332px;
     bottom: 0;
     left: 0%;
     right: 0;
-    background-color: #008CBA;
+    background-color: rgba(0, 0, 0, 0.603);
     overflow: hidden;
     color: transparent;
     /*transition from hover to unhover*/
@@ -84,8 +78,8 @@ left: 332px;
 
 }
 .commonBoxStyle:hover .overlay{
-    width: 75%;
-    color: black;
+    width: 300px;
+    color: white;
     /*transition from unhover to hover*/
     transition: 
         width   .2s cubic-bezier(.23,.65,.19,1),
@@ -94,7 +88,7 @@ left: 332px;
 }
 .contents{
     position: absolute;
-    right: 80px;
+    left: 20px;
     width: auto;
     margin: 10px;
     text-align: left;
@@ -138,4 +132,28 @@ left: 332px;
     margin-bottom: 30px;
     grid-row: 5/-1;
     grid-column: 2/4;
+}
+.commonBoxStyle>a{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+.box1>a>div{
+    width: 50%;
+    height: auto;
+    font-size: 100px;
+    font-weight:bold;
+    color: rgb(172, 8, 8);
+    text-shadow: 
+        3px 3px 4px rgb(118, 21, 8),
+        -3px -3px 4px rgb(118, 21, 8),
+        3px -3px 4px rgb(118, 21, 8),
+        -3px 3px 4px rgb(118, 21, 8);
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }

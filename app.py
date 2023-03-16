@@ -18,13 +18,13 @@ def profile(name):
 # 메인페이지 데이터 가져오기
 @app.route("/data", methods=["GET"])
 def load_teammate():
-    all_contents = list(collection.find({},{"_id":False,}))[::-1]
+    all_contents = list(collection.find({},{"name":True,"age":True,"gender":True,"mbti":True,"shortDesc":True, "thumbnail":True,'_id':False}))
     return jsonify({'result':all_contents})
 
 # 프로필 페이지 데이터 가져오기
 @app.route("/profile/<string:name>/data", methods=["GET"])
 def load_profile(name):
-    profile = collection.find_one({'name':name},{"_id":False,})
+    profile = collection.find_one({'name':name},{"_id":False,"shortDesc":False,"thumbnail":False,})
     return jsonify({'result':profile})
 
 
