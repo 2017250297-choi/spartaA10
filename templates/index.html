@@ -5,22 +5,40 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>information</title>
   <link rel="stylesheet" href="/static/index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   <script src="/static/index.js"></script>
+  <style>
+    body{
+        background-image: url('https://i.ibb.co/ydkWMhQ/background-2.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+  </style>
 </head>
 
 <body>
   <div class="container">
-    <div class="item">TMI</div>
-    <div class="item">IMG</div>
-    <div class="item">목표/협업스타일 등</div>
-    <div class="item">information</div>
-    <div class="item">이메일주소</div>
-    <div class="hide"></div>
-    <div class="item">장단점</div>
+    <div class="origin item">LOADING...</div>
+    <div class="origin item">LOADING...</div>
+    <div class="origin item">LOADING...</div>
+    <div class="origin item">
+      LOADING...
+      <div class="p_likebox">
+        <div id="likecount1">
+          LOADING...
+        </div>
+        <button class="custom-btn like" onclick="like_click()">like it</button>
+      </div>
+      
+    </div>
+    <div class="origin item">LOADING...</div>
+    <div class="origin hide"></div>
+    <div class="origin item">LOADING...</div>
   </div>
+  <button class="to_main" onclick="location.href='/'">메인페이지로 돌아가기</button>
 </body>
 
 </html>

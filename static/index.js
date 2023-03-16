@@ -1,11 +1,17 @@
 var link = document.location.href
 var string = decodeURI(link);
 var urlname = string.slice(30, -1)
-console.log(urlname)
+var click=0;
+var loaded_like=0;
 $(document).ready(function () {
 	
 	listing();
 	
+	// 좋아요 업데이트 함수
+	window.onbeforeunload = function (event) {
+		likes_update();
+	}
+
 });
 
 function listing() {
@@ -28,27 +34,66 @@ function listing() {
 			<div class="item">
 				<h3>TMI</h3>
 				<p>${tmi}</p>
-			</div>
+				</div>
 			<div id="imgbox" class="item"></div>
 			<div class="item">
-				<h3>목표/협업스타일 등</h3>
-				<p>${goal_style}</p>
+			<h3>목표/협업스타일 등</h3>
+			<p>${goal_style}</p>
 			</div>
 			<div class="item">
-				<h3>Info</h3>
-				이름: ${name}<br>
-				연령: ${age}<br>
-				성별: ${gender}<br>
-				MBTI: ${mbti}
-
+			<h3>INFO</h3>
+			이름: ${name}<br>
+			연령: ${age}<br>
+			성별: ${gender}<br>
+			MBTI: ${mbti}
+      		<div class="p_likebox">
+        		<div id="likecount1">
+        		</div>
+        		<button class="custom-btn like" onclick="like_click()">like it</button>
+      		</div>
 			</div>
 			<div class="item">블로그 주소:<a href="${blog}">${blog}</a></div>
 			<div class="hide"></div>
 			<div class="item">
-				<h3>나의 장단점</h3>
-				<p>${pro_con}</p>
+			<h3>나의 장단점</h3>
+			<p>${pro_con}</p>
 			</div>`
 			$('.container').append(temp_html)
+			insert_personal_like();  // 좋아요 로드 함수
 			$('#imgbox').css("background-image","url("+ imglink+")")
+			$('.origin').remove()
 		})
 	}
+	
+// 좋아요 불러오기
+
+
+function insert_personal_like(){
+	fetch('/likes/' + urlname + '/personal').then((res) => res.json()).then((data) => {
+		like = data['result']
+		loaded_like = Object.values(like)[0]
+		console.log(loaded_like)
+		$('#likecount1').append(`좋아요!:<br>${loaded_like}`)
+	})
+}
+
+
+
+// 좋아요 업데이트
+function likes_update() {
+	let formData = new FormData();
+	formData.append("like_give", click);
+
+	fetch('/likes/'+urlname+'/personal',{method:"PUT", body: formData}).then((res) => res.json()).then((data) => {
+	})
+}
+// 좋아요 버튼 이벤트
+function like_click(){
+	click++;
+	console.log(click)
+	let new_like=click+loaded_like
+	$('#likecount1').empty()
+	$('#likecount1').append(`좋아요!:<br>${new_like}`)
+	
+}
+	

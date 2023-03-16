@@ -4,17 +4,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <title>C.A.I info</title>
     <link rel="stylesheet" href="/static/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="/static/main.js"></script>
+    <style>
+        body{
+            background-image: url('https://i.ibb.co/PjpM7DT/2023-03-16-7-45-57.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="bubble"></div>
+    <div class="wrap">
+        <div class="bubble"></div>
+        <div class="container">
+            <div class = "commonBoxStyle box1">
+                <a href="/">
+                    <img src="https://media.kasperskycontenthub.com/wp-content/uploads/sites/103/2016/10/06233221/shutterstock_96838054.jpg" class="Detail1" alt=""> 
+                    
+                    <div>
+                        the X-profile
+                    </div>
+                    <h1>좋아요!: <span id="likecount1">0<span></h1>
+                </a>
+            </div>
+            <p style="font-size:large">LOADING...</p> 
+            <div class = "commonBoxStyle box7">
+                <div class="contents">
+                    <h2>팀 소개</h2>
+                    <p>안녕하세요. 저희는 C.A.I.팀 입니다. C.A.I는 Cartoon+AI의 줄임말로, AI웹개발 내일배움캠프에서 만화라는 관심사로 뭉친 저희 팀원들의 특성을 반영함과 동시에 미국중앙정보국(CIA)의 이름과의 유사성을 노린 언어유희에서 비롯되었습니다.</p>
+                    <p>저희는 이번 프로젝트에서 기능별로 역할을 분담하였으며, back-end는 주로 최창수(DB조회 API)/최재영(프론트-백엔드 연결)/장우석(DB수정 API)이, front-end는 김태연(상세정보 페이지), 연제건(메인페이지)이 맡게되었습니다.</p>
+                    <p>저희의 팀 소개 페이지 만들기 미니 프로젝트는 비동기형의 좋아요 버튼(클릭 카운트)와 여러 정적, 동적 페이지 구성요소로 이루어져 있습니다. 대표적인 기능인 좋아요 버튼 무지성 누르기를 통해 심신의 안정을 느껴보세요!</p>
+                </div>
+            </div>
+            <div class = "commonBoxStyle box8">
+                <img class="teamImg" src="https://i.postimg.cc/631ynCbP/image.png" alt="">
+                <div class="teamImgCap">4개월후 내배캠을 수료한 팀원들의 상상도. 인당 1.2인분씩하여 6명이 되었다.</div>
+            </div>
+        </div><!--container-->
+    </div>
     
-    <div class="container">
-        <h1>LOADING...</h1>
+    <button class="likeBtn" onclick="like_click()">like</button>
+
+    <!-- 여기부터 만화추천 -->
+    <div class="mypost">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="name" placeholder="url" />
+            <label for="floatingInput">만화이름</label>
+        </div>
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="comment"
+                style="height: 100px"></textarea>
+            <label for="floatingTextarea2">만화추천</label>
+        </div>
+        <button onclick="save_comment()" type="button" class="btn btn-dark">
+            만화추천 남기기
+        </button>
+    </div>
+    <div class="mycards" id="comment-list">
+        <div class="card">
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p></p>
+                    <footer class="blockquote-footer"></footer>
+                </blockquote>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p></p>
+                    <footer class="blockquote-footer"></footer>
+                </blockquote>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p></p>
+                    <footer class="blockquote-footer"></footer>
+                </blockquote>
+            </div>
+        </div>
     </div>
 </body>
 
