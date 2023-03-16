@@ -1,0 +1,286 @@
+
+/* 타이틀 말풍선 */
+.bubble {
+    position: relative;
+    width: 500px;
+    height: 185px;
+    background: #FFFFFF;
+    background-image: url('https://i.postimg.cc/50191XnF/1.png');
+    background-size: 160%;
+    background-position: 35% 45%;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 46px;
+    -moz-border-radius: 46px;
+    border-radius: 46px;
+    border: hwb(180 49% 50%) solid 3px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    
+}
+/* 타이틀 말풍선 밑 화살표*/
+.bubble:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 33px 25px 0;
+    border-color: #FFFFFF transparent;
+    overflow: hidden;
+    display: block;
+    width: 0;
+    z-index: 1;
+    bottom: -33px;
+    left: 334px;
+}
+/* 타이틀 말풍선 밑 화살표*/
+.bubble:before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 35px 27px 0;
+    border-color: #7D7F7F transparent;
+    display: block;
+    width: 0;
+    z-index: 0;
+    bottom: -38px;
+    left: 332px;
+}
+/* 그리드를 씌운 컨테이너 (박스 전체 포함함) */
+.container {
+    width: 80%;
+    aspect-ratio: 1/1.618;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    justify-content: center;
+    gap: 30px;
+    /* box-sizing: border-box; */
+}
+/* 박스 전체 스타일 */
+.commonBoxStyle {
+    position: relative;
+    border: 5px solid black;
+    text-align: center;
+    box-shadow: 9px 11px 6px 3px rgba(0, 0, 0, 0.45);
+    /* box-sizing: border-box; */
+    overflow: hidden;
+}
+
+.overlay {
+    max-width: 400px;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.603);
+    overflow: hidden;
+    color: transparent;
+    /*transition from hover to unhover*/
+    transition:
+        width .2s .05s cubic-bezier(.23, .65, .19, 1),
+        color .1s cubic-bezier(0.00, 0.78, 0.28, 0.97);
+
+
+}
+
+.commonBoxStyle:hover .overlay {
+    max-width: 400px;
+    width: 75%;
+    color: white;
+    /*transition from unhover to hover*/
+    transition:
+        width .2s cubic-bezier(.23, .65, .19, 1),
+        color .1s .15s cubic-bezier(.72, .03, 1, .22);
+}
+
+.contents {
+    position: absolute;
+    left: 20px;
+    width: auto;
+    margin: 10px;
+    text-align: left;
+}
+
+.box1 {
+    position: relative;
+    grid-column: 1/4;
+}
+/* 프로파일 뒷 배경 */
+.Detail1 {
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+}
+
+
+.box2 {
+    grid-row: 2/4;
+}
+
+.box3 {
+    grid-column: 2/ 4;
+}
+
+.box4 {
+
+    grid-column: 2/4;
+}
+
+.box5 {
+    grid-column: 1/3;
+}
+
+.box6 {
+    grid-column: 3/ 4;
+}
+
+.box7 {
+    margin-bottom: 30px;
+    grid-row: 5 / 7;
+}
+
+.box8 {
+    margin-bottom: 30px;
+    grid-row: 5/-1;
+    grid-column: 2/4;
+    background-color: beige;
+}
+
+.commonBoxStyle>a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.box1>a>div {
+    width: 90%;
+    height: auto;
+    font-size: 100px;
+    font-weight: bold;
+    color: rgb(172, 8, 8);
+    text-shadow:
+        3px 3px 4px rgb(255, 255, 255),
+        -3px -3px 4px rgb(255, 255, 255),
+        3px -3px 4px rgb(255, 255, 255),
+        -3px 3px 4px rgb(255, 255, 255);
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+/* 좋아요 버튼 */
+.likeBtn {
+    position: fixed;
+    bottom: 10%;
+    right: 3%;  
+    width: 5vw;
+    height: 5vw;
+    text-size-adjust: auto;
+    background-color: rgb(255, 209, 205);
+    border-style: solid;
+    border-color: rgb(197, 44, 44);
+    border-radius: 10%;
+    color: rgb(197, 44, 44);
+    box-shadow: transparent;
+}
+.likeBtn:hover{
+    background-color: rgb(197, 44, 44);
+    border-color: rgb(239, 111, 99);
+    color: rgb(239, 111, 99);
+    box-shadow: 2px 2px #7D7F7F;
+}
+.likeBtn:active{
+    background-color: rgb(255, 209, 205);
+    border-color: rgb(197, 44, 44);
+    color: rgb(197, 44, 44);
+}
+/* 좋아요 카운트 속성 */
+.box1>a>h1{
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 89%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: rgb(136, 15, 15);
+    font-weight: bold;
+    font-size: 200%;
+    border-radius: 20px;
+    border-style: dashed;
+    border-width: 5px;
+    border-color: (136, 15, 15);
+    padding: 5px
+}
+.box1>a>h1>span{
+    font-size: 100%;
+}
+.contents>span{
+    font-weight: bold;
+    font-size:105%;
+}
+.contents>span:nth-child(1){
+    font-weight: bold;
+    font-size:140%;
+}
+.box7>.contents{
+    position: static;
+    margin: 30px;
+    text-align:justify;
+    font-size: small;
+
+
+}
+
+/* 방명록 속성 */
+.mypost {
+    width: 95%;
+    max-width: 500px;
+    margin: 20px auto 20px auto;
+
+    box-shadow: 0px 0px 3px 0px black;
+    padding: 20px;
+}
+
+.mypost>button {
+    margin-top: 15px;
+}
+
+.mycards {
+    width: 95%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.mycards>.card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.teamImg{
+    z-index: 1;
+    width:100%;
+    height:auto;
+}
+.teamImgCap{
+    z-index: 2;
+    width:100%;
+    height: 15%;
+    position: absolute;
+    bottom:0%;
+    background-color: beige;
+    font-weight: bold;
+    font-size: large;
+    text-align:center;
+}

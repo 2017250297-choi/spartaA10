@@ -40,7 +40,6 @@ def like_show():
 #like 수정. front로부터 버튼이 눌린횟수를 받아와 업데이트
 @app.route("/likes", methods=["PUT"])
 def like_update():
-    print(int(request.form['like_give']))
     like_receive= int(request.form['like_give'])#클릭수받음
     old_data=likes_coll.find_one({},{'_id':False,})#DB의 구 like
     new_like=int(old_data['like'])+like_receive#합산
