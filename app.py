@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 from flask import Flask, render_template, request, jsonify, app
-client = MongoClient("mongodb+srv://sparta:test@cluster0.3gnwcuy.mongodb.net/?retryWrites=true&w=majority")
+client = MongoClient("")
 db = client['cai']
 collection = db['cai']
 likes_coll = db['likes']
